@@ -1,0 +1,18 @@
+<Database>
+versionNumber:2
+Name/home/student/Downloads/project/RTL2GDSII/ICCII/check_design.ems
+Creation TimeTue Jun  3 09:55:43 2025
+Modified TimeTue Jun  3 09:55:43 2025
+Design NamemagComp
+Library Name8bit_comparator_LIB
+</Database>
+<RuleCount>
+CTS-9141
+DFT-0111
+</RuleCount>
+<UserDefinedRules>
+</UserDefinedRules>
+<Messages>
+DFT-011Informationreason10
+CTS-914WarningportClock10
+</Messages>
