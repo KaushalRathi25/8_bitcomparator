@@ -61,9 +61,9 @@ Logic implemented using binary comparison cascaded from MSB to LSB.
 vcs -full64 comparator_8bit.v comparator_8bit_tb.v -debug_access+all -lca -kdb
 ./simv
 verdi -ssf novas.fsdb -nologo
+
 ## ✅ Step 2: Synthesis (Design Compiler)
 
-Edit
 dc_shell
 source run_dc.tcl
 Reports:
