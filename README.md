@@ -65,8 +65,11 @@ verdi -ssf novas.fsdb -nologo
 ## ✅ Step 2: Synthesis (Design Compiler)
 
 dc_shell
+
 source run_dc.tcl
+
 Reports:
+
 report_qor
 
 report_timing
@@ -76,12 +79,19 @@ report_power
 ## ✅ Step 3: Physical Design (ICC2)
 
 icc2_shell
+
 start_gui
+
 source scripts/floorplan.tcl
+
 source scripts/placement.tcl
+
 source scripts/power_planning.tcl
+
 source scripts/clock.tcl
+
 source scripts/route.tcl
+
 ## ✅ Step 4: Timing and Power Analysis (PrimeTime)
 
 pt_shell
