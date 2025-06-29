@@ -38,19 +38,33 @@ Logic implemented using binary comparison cascaded from MSB to LSB.
 ## 📁 Project Structure
 
 ├── src/
+
 │   ├── 8bit_comparator_rtl.v
+
 │   └── 8bit_comparator_tb.v
+
 ├── constraints/
+
 │   └── 8bit_comparator.sdc
+
 ├── DC/
+
 │   └── run_dc.tcl
+
 ├── ICC2/scripts/
+
 │   ├── floorplan.tcl
+
 │   ├── power_planning.tcl
+
 │   ├── placement.tcl
+
 │   ├── route.tcl
+
 │   └── clock.tcl
+
 └── results/
+
     └── magComp.mapped.v
 
 ---
@@ -96,7 +110,9 @@ source scripts/route.tcl
 ## ✅ Step 4: Timing and Power Analysis (PrimeTime)
 
 pt_shell
+
 report_timing
+
 report_power
 
 
@@ -106,8 +122,12 @@ report_power
 This project successfully implements a digital 8-bit Magnitude Comparator using Verilog HDL and completes the ASIC flow from RTL simulation to GDSII layout generation using Synopsys tools.
 
 ✔️ RTL logic verified through testbench simulation
+
 ✔️ Timing-constrained synthesis using Design Compiler
+
 ✔️ Floorplanning, placement, routing completed using ICC2
+
 ✔️ Timing and power analysis done using PrimeTime
+
 ✔️ Final GDSII generated for tape-out
 
