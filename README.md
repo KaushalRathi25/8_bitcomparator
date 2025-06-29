@@ -60,6 +60,7 @@ Logic implemented using binary comparison cascaded from MSB to LSB.
 
 vcs -full64 comparator_8bit.v comparator_8bit_tb.v -debug_access+all -lca -kdb
 ./simv
+
 verdi -ssf novas.fsdb -nologo
 
 ## ✅ Step 2: Synthesis (Design Compiler)
@@ -98,13 +99,6 @@ pt_shell
 report_timing
 report_power
 
-## 📊 Results Summary
-Metric	Post-Synthesis	Post-Layout (ICC2)
-Cell Area	~300 µm²	~270 µm²
-Slack	+0.92 ns	+0.15 ns
-Clock Frequency	100 MHz	111 MHz
-Power	~5 µW	~6 µW
-Leaf Cells	~120	~98
 
 
 
