@@ -37,35 +37,25 @@ Logic implemented using binary comparison cascaded from MSB to LSB.
 
 ## 📁 Project Structure
 
-├── src/
+📁 Project Structure
+## 📁 Project Structure
 
-│   ├── 8bit_comparator_rtl.v
+`src/8bit_comparator_rtl.v` – RTL Verilog source code  
+`src/8bit_comparator_tb.v` – Verilog testbench  
 
-│   └── 8bit_comparator_tb.v
+`constraints/8bit_comparator.sdc` – SDC timing constraints  
 
-├── constraints/
+`DC/run_dc.tcl` – Design Compiler synthesis script  
 
-│   └── 8bit_comparator.sdc
+`ICC2/scripts/floorplan.tcl` – Floorplanning TCL script  
+`ICC2/scripts/power_planning.tcl` – Power network setup  
+`ICC2/scripts/placement.tcl` – Placement step  
+`ICC2/scripts/route.tcl` – Routing phase  
+`ICC2/scripts/clock.tcl` – Clock Tree Synthesis  
 
-├── DC/
+`results/magComp.mapped.v` – Final synthesized netlist
 
-│   └── run_dc.tcl
 
-├── ICC2/scripts/
-
-│   ├── floorplan.tcl
-
-│   ├── power_planning.tcl
-
-│   ├── placement.tcl
-
-│   ├── route.tcl
-
-│   └── clock.tcl
-
-└── results/
-
-    └── magComp.mapped.v
 
 ---
 
@@ -117,6 +107,24 @@ report_power
 
 
 
+## 📊 Final Reports (Detailed Stages, Power in pW)
+
+The backend physical design stages were executed using Synopsys ICC2 tools. Below is a consolidated table of reports from floorplanning to final routing.
+
+| Stage              | Area (µm²) | Slack (ns) | Power (pW)     |
+|--------------------|------------|------------|----------------|
+| Floorplan          | 104.45     | 1.22       | 168,000,000    |
+| Placement          | 81.58      | 1.22       | 168,000,000    |
+| Power Planning     | 104.45     | 1.22       | 168,000,000    |
+| Clock Tree Synthesis (CTS) | 81.58 | 1.22     | 168,000,000    |
+| Routing            | 89.71      | 1.20       | 293,000,000    |
+
+> ✅ All results show **positive timing slack** and successful optimization at each physical design stage.
+>  
+> ⚡ Power values are represented in **picowatts (pW)** for clarity and precision.
+
+
+> 📈 The design progressively improved through each stage, maintaining low power and area, with timing slack > 0.
 
 ## ✅ Summary
 This project successfully implements a digital 8-bit Magnitude Comparator using Verilog HDL and completes the ASIC flow from RTL simulation to GDSII layout generation using Synopsys tools.
@@ -131,3 +139,11 @@ This project successfully implements a digital 8-bit Magnitude Comparator using 
 
 ✔️ Final GDSII generated for tape-out
 
+
+## 👨‍💻 Author
+
+**Kaushal Rathi**  
+B.Tech ICT, Pandit Deendayal Energy University  
+Roll No: 23BIT232  
+Under the guidance of **Mr. Puneet Mittal**  
+📧 [23bit232@sot.pdpu.ac.in](mailto:23bit232@sot.pdpu.ac.in)
