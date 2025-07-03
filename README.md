@@ -37,9 +37,6 @@ Logic implemented using binary comparison cascaded from MSB to LSB.
 
 ## 📁 Project Structure
 
-📁 Project Structure
-## 📁 Project Structure
-
 `src/8bit_comparator_rtl.v` – RTL Verilog source code  
 `src/8bit_comparator_tb.v` – Verilog testbench  
 
